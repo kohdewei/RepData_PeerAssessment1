@@ -1,0 +1,262 @@
+str(newData$steps)
+str(newData$interval)
+head(newData$interval)
+stepsPerInterval(head(newData$interval))
+stepsPerInterval <- tapply(data$steps, data$interval, FUN=mean, na.rm=TRUE)
+stepsPerInterval[head(newData$interval)]
+stepsPerInterval["0"]
+stepsPerInterval["5"]
+stepsPerInterval[5]
+stepsPerInterval[[0]]
+stepsPerInterval["0"]
+stepsPerInterval$0
+class(stepsPerInterval)
+is.list(stepsPerInterval)
+is.matrix(stepsPerInterval)
+is.factor(stepsPerInterval)
+is.array(stepsPerInterval)
+c(head(newData$interval))
+stepsPerInterval[c(head(newData$interval))]
+as.character(5)
+as.character(head(newData$interval))
+stepsPerInterval[as.character(head(newData$interval))]
+newData <- data
+length(stepsPerInterval[as.character(newData$interval[is.na(data$steps)])])
+imputedData <- data#
+naIntervals <- data$interval[is.na(data$steps)]#
+stepsToImpute <- stepsPerInterval[as.character(naIntervals)]#
+replace(imputedData$steps, is.na(imputedData$steps), stepsToImpute)
+length(imputedData)
+dim(imputedData)
+dim(data)
+length(is.na(data$steps))
+sum(is.na(data$steps))
+sum(is.na(iputedData$steps))
+sum(is.na(imputedData$steps))
+imputedData$steps
+imputedData <- data#
+naIntervals <- data$interval[is.na(data$steps)]#
+stepsToImpute <- stepsPerInterval[as.character(naIntervals)]#
+imputedData$steps[is.na(imputedData$steps)] <- stepsToImpute
+imputedData$steps
+length(imputedData$steps)
+length(data$steps)
+sum(is.na(data$steps))
+sum(is.na(imputedData$steps))
+sum(imputedData$steps==0)
+sum(data$steps==0)
+data <- read.csv(unzip("activity.zip"))
+na.omit?
+omit?
+sum?
+?sum
+?na.omit
+* factor(c(“yes”,”no”,”yes”))
+factor(c("yes","no","yes"))
+x<-factor(c("yes","no","yes"))
+table(x)
+?na.omit
+str(data)
+na.omit(data, data$steps)
+data2<-na.omit(data, data$steps)
+str(data2)
+dim(Data)
+dim(data)
+dim(data2)
+stepsPerDay <- tapply(data$steps, data$date, FUN=sum, na.rm=TRUE)
+dim(stepsPerDay)
+?lapply
+test <- lapply(stepsPerDay, length)
+test
+sum(length)
+stepsPerDay
+str(data2)
+?aggregate
+aggregate(data2, data2$date, sum)
+aggregate(data2, by=data2$date, sum)
+str(data)
+str(data)
+data$date
+calss(data2)
+class(data2)
+as.list(data2$dates)
+x<-as.list(data2$dates)
+x
+aggregate(data2, by=as.class(data2$date), sum)
+aggregate(data2, by=as.list(data2$date), sum)
+length(data2$date)
+length(as.list(data2$date))
+stepsPerDay <- tapply(data$steps, data$date, FUN=sum, na.rm=TRUE)
+stepsPerDay
+stepsPerDay <- tapply(data$steps, data$date, FUN=sum, na.omit=TRUE)
+stepsPerDay
+median(stepsPerDay)
+median(stepsPerDay, na.omit=TRUE)
+median(stepsPerDay, na.rm=TRUE)
+?tapply
+stepsPerDay <- tapply(data$steps, data$date, FUN=sum)
+median(stepsPerDay, na.rm=TRUE)
+stepsPerDay <- tapply(data$steps, data$date, FUN=sum, na.omit=TRUE)
+median(stepsPerDay, na.rm=TRUE)
+mean(stepsPerDay, na.rm=TRUE)
+stepsPerDay <- tapply(data$steps, data$date, FUN=sum)
+mean(stepsPerDay, na.rm=TRUE)
+tapply(data$steps, data$date, FUN=sum, na.omit=TRUE)
+tapply(data$steps, data$date, FUN=sum)
+data$steps[data$dates=="2012-10-02"]
+data$steps[data$dates="2012-10-02"]
+data$dates=="2012-10-02"
+data$dates
+data
+head(data)
+data$date=="2012-10-02"
+data$steps[data$date=="2012-10-02"]´
+data$steps[data$date=="2012-10-02"]
+117+9
+stepsPerDay <- tapply(data$steps, data$date, FUN=sum, na.rm=TRUE)
+stepsPerDay
+stepsPerDay <- tapply(data$steps, data$date, FUN=sum, na.omit=TRUE)
+stepsPerDay
+?na.omit
+str(data2)
+tapply(data2, data2$date, FUN=sum)
+tapply(data2$steps, data2$date, FUN=sum)
+tapply(data2$steps, data2$date, FUN=sum, na.omit=TRUE)
+tapply(data2$steps, data2$date, FUN=sum, na.rm=TRUE)
+data2
+?hist
+stepsPerDay <- tapply(data$steps, data$date, FUN=sum, na.rm=TRUE)
+hist(stepsPerDay,#
+     main="Histogram of Total Number of Steps Taken Per Day",#
+     xlab="Total Number of Steps Taken Per Day", breaks=10)
+dim(Data)
+dim(data)
+?na.exclude
+data$steps[data$date=="2012-11-02"]
+data$steps[data$date=="2012-1=2-02"]
+data$steps[data$date=="2012-12-02"]
+data$steps[data$date=="2012-10-02"]
+117+9
+sum(data$steps[data$date=="2012-10-02"])
+data <- read.csv(unzip("activity.zip"))
+data$steps[data$date=="2012-10-02"]
+stepsPerDay <- tapply(data$steps, data$date, FUN=sum, na.rm=TRUE)
+stepsPerDay
+?na.omt
+?na.omit
+na.omit(data)
+data2 <-na.omit(data)
+tapply(data2$steps, data2$date, FUN=sum)
+stepsPerDay <- tapply(data2$steps, data2$date, FUN=sum)
+stepsPerDay2 <- na.omit(stepsPerDay)
+na.omit(stepsPerDay)
+mean(stepsPerDay, na.rm=TRUE)
+median(stepsPerDay, na.rm=TRUE)
+mean(stepsPerDay[!is.na(stepsPerDay)])
+tapply(data$steps, data$date, FUN=sum)
+tapply(data$steps, data$date, FUN=sum, na.rm=TRUE)
+tapply(data$steps, data$date, FUN=sum, na.omit=TRUE)
+tapply(data$steps, data$date, FUN=sum, na.action=na.omit)
+tapply(data$steps, data$date, FUN=sum, na.omit=TRUE)
+tapply(data$steps, data$date, FUN=sum)
+s<-tapply(data$steps, data$date, FUN=sum)
+stepsPerDay<-tapply(data$steps, data$date, FUN=sum)
+stepsPerDayMedian = median(stepsPerDay, na.rm=TRUE)
+stepsPerDayMedian
+mean((stepsPerDay, na.rm=TRUE))
+mean(stepsPerDay, na.rm=TRUE)
+?aggregate
+stepsPerDay <- tapply(data$steps, data$date, FUN=sum, na.rm=TRUE)
+stepsPerDay
+tapply(data$steps, data$date, function(x) sum(x, na.rm=TRUE))
+tapply(data$steps, data$date, function(x) sum(x, na.omit=TRUE))
+tapply(data$steps[!is.na(data$steps)], data$date[!is.na(data$steps)], function(x) sum(x, na.omit=TRUE))
+na.omit(data)
+data <- na.omit(data)
+cleansedData <- na.omit(data)#
+stepsPerDay <- tapply(cleansedData$steps, cleansedData$date, FUN=sum)
+stepsPerDay
+stepsPerDayMedian = median(stepsPerDay, na.rm=TRUE)#
+stepsPerDayMean = mean(stepsPerDay, na.rm=TRUE)
+stepsPerDayMedian
+stepsPerDayMean
+stepsPerDayMedian = median(stepsPerDay, na.omit=TRUE)
+?aggregate
+?tapply
+data2 <- na.omit(data)
+str(data2)
+str(data2$data)
+str(data2$date)
+table(data2$date)
+data2$date <- factor(data2$date)
+table(data2$date)
+cleansedData <- na.omit(data)#
+cleansedData$date <- factor(cleansedData$date)#
+stepsPerDay <- tapply(cleansedData$steps, cleansedData$date, FUN=sum)
+stepsPerDay
+stepsPerDayMedian = median(stepsPerDay)
+stepsPerDayMean = mean(stepsPerDay)
+stepsPerDayMedian
+stepsPerDayMean
+stepsPerDay[,]
+stepsPerDay[,1]
+stepsPerDay[1,]
+stepsPerDay[1,1]
+stepsPerDay[1]
+c(stepsPerDay)
+str(stepsPerDay)
+class(stepsPerDay)
+stepsPerDay[1]
+stepsPerDay[[1]]
+stepsPerDay[[]]
+stepsPerDay[[1:1000]]
+stepsPerDay[[]]
+stepsPerDay
+median(stepsPerDay,na.rm=TRUE)
+mean(stepsPerDay,na.rm=TRUE)
+?weekdays
+weekdays(head(data$date))
+weekdays(data)
+?weekdays
+weekdays(.leap.seconds)
+.leap.seconds
+weekdays("2012-10-04")
+weekdays("2012-10-04 00:00:00")
+weekdays("2012-10-04 00:00:00 SGT")
+weekdays("1972-07-01 07:30:00 SGT")
+x<- "1972-07-01 07:30:00 SGT"
+weekdays("1972-07-01 07:30:00 SGT")
+weekdays(x)
+x<-.leap.seconds
+class(x)
+head(data$date)
+as.Date(head(data$date))
+weekdays(as.Date(head(data$date)))
+weekdays(as.Date(head(data$date))) %in c("Tuesday")
+weekdays(as.Date(head(data$date))) %in% c("Tuesday")
+weekdays(as.Date(head(data$date))) %in% c("Wednesday")
+weekdays(as.Date(head(data$date))) %in% c("Wednesday", "Tuesday")
+weekdays(as.Date(head(data$date))) %in% c("Saturday", "Sunday")
+aggregated1<-aggregate(activity$steps, by = list(data$date), FUN = median, na.rm=T)
+aggregated1<-aggregate(data$steps, by = list(data$date), FUN = median, na.rm=T)
+aggregated1
+> aggregated1<-aggregate(data$steps, by = list(data$date), FUN = sum, na.rm=T)
+aggregate(data$steps, by = list(data$date), FUN = sum, na.rm=T)
+x <- aggregate(data$steps, by = list(data$date), FUN = sum, na.rm=T)
+data
+data <- read.csv(unzip("activity.zip"))
+x <- aggregate(data$steps, by = list(data$date), FUN = sum, na.rm=T)
+x
+data <- na.omit(data)
+x <- aggregate(data$steps, by = list(data$date), FUN = sum, na.rm=T)
+x
+median(x)
+median(x$x)
+mean(x$x)
+stepsPerDAy
+stepsPerDay
+median(stepsPerDay)
+median(stepsPerDay$steps)
+median(stepsPerDay)
+hist(stepsPerday)
+hist(stepsPerDay)
