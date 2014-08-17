@@ -1,34 +1,3 @@
-str(newData$steps)
-str(newData$interval)
-head(newData$interval)
-stepsPerInterval(head(newData$interval))
-stepsPerInterval <- tapply(data$steps, data$interval, FUN=mean, na.rm=TRUE)
-stepsPerInterval[head(newData$interval)]
-stepsPerInterval["0"]
-stepsPerInterval["5"]
-stepsPerInterval[5]
-stepsPerInterval[[0]]
-stepsPerInterval["0"]
-stepsPerInterval$0
-class(stepsPerInterval)
-is.list(stepsPerInterval)
-is.matrix(stepsPerInterval)
-is.factor(stepsPerInterval)
-is.array(stepsPerInterval)
-c(head(newData$interval))
-stepsPerInterval[c(head(newData$interval))]
-as.character(5)
-as.character(head(newData$interval))
-stepsPerInterval[as.character(head(newData$interval))]
-newData <- data
-length(stepsPerInterval[as.character(newData$interval[is.na(data$steps)])])
-imputedData <- data#
-naIntervals <- data$interval[is.na(data$steps)]#
-stepsToImpute <- stepsPerInterval[as.character(naIntervals)]#
-replace(imputedData$steps, is.na(imputedData$steps), stepsToImpute)
-length(imputedData)
-dim(imputedData)
-dim(data)
 length(is.na(data$steps))
 sum(is.na(data$steps))
 sum(is.na(iputedData$steps))
@@ -260,3 +229,41 @@ median(stepsPerDay$steps)
 median(stepsPerDay)
 hist(stepsPerday)
 hist(stepsPerDay)
+data <- read.csv(unzip("activity.zip"))
+cleansedData <- na.omit(data)
+stepsPerDay <- aggregate(cleansedData$steps, by = list(cleansedData$date), FUN = sum, na.rm=T)
+hist(stepsPerDay)
+stepsPerDay
+stepsPerDay$x
+mean(stepsPerDay)
+mean(stepsPerDay$)
+mean(stepsPerDay$x)
+weekdays(as.Date(head(data$date))) %in% c("Saturday", "Sunday")
+ifelse(weekdays(as.Date(head(data$date))) %in% c("Saturday", "Sunday"), "weekday", "weekend")
+ifelse(weekdays(as.Date(head(data$date))) %in% c("Saturday", "Sunday"), "weekend", "weekday")
+x <- ifelse(weekdays(as.Date(data$date)) %in% c("Saturday", "Sunday"), "weekend", "weekday")
+imputedData <- data#
+naIntervals <- imputedData$interval[is.na(imputedData$steps)]#
+stepsToImpute <- stepsPerInterval[as.character(naIntervals)]#
+imputedData$steps[is.na(imputedData$steps)] <- stepsToImpute
+str(x)
+table(x)
+head(imputedData)
+imputedData$datetype <- factor(ifelse(weekdays(as.Date(data$date)) %in% c("Saturday", "Sunday"), "weekend", "weekday"))
+table(imputedData$datetype)
+str(imputedData)
+stepsPerIntervalWeekend <- tapply(cleansedData$steps[cleansedData$datetype=="weekend"], #
+                                  cleansedData$interval[cleansedData$datetype=="weekend"], #
+                                  FUN=mean)#
+stepsPerIntervalWeekday <- tapply(cleansedData$steps[cleansedData$datetype=="weekday"], #
+                                  cleansedData$interval[cleansedData$datetype=="weekday"], #
+                                  FUN=mean)
+head(stepsPerIntervalWeekend)
+stepsPerIntervalWeekend
+head(cleansedData$steps[cleansedData$datatype=="weekend"]
+)
+imputedData$datetype <- factor(ifelse(weekdays(as.Date(data$date)) %in% c("Saturday", "Sunday"), "weekend", "weekday"))
+stepsPerIntervalWeekend <- tapply(cleansedData$steps[cleansedData$datetype=="weekend"], #
+                                  cleansedData$interval[cleansedData$datetype=="weekend"], #
+                                  FUN=mean)
+stepsPerIntervalWeekend

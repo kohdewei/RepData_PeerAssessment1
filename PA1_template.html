@@ -287,7 +287,7 @@ stepsPerDayMeanImputed = mean(stepsPerDayImputed)
 
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
 
-<p>In order to surface any differences in activity patterns between weekdays and weekends,  new factor variable is created with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.</p>
+<p>In order to surface any differences in activity patterns between weekdays and weekends,  new factor variable is created with two levels – “weekday” and “weekend” indicating whether a given date is a weekday day or a weekend day.</p>
 
 <pre><code class="r">imputedData$datetype &lt;- factor(ifelse(weekdays(as.Date(data$date)) %in% c(&quot;Saturday&quot;, &quot;Sunday&quot;), &quot;weekend&quot;, &quot;weekday&quot;))
 </code></pre>
@@ -305,7 +305,14 @@ stepsPerIntervalWeekday &lt;- tapply(imputedData$steps[imputedData$datetype==&qu
 <p>We then generate a panel plot containing a time series plot of the 5-minute interval and the average number of steps taken, averaged across all weekday days or weekend days.</p>
 
 <pre><code class="r">attach(mtcars)
-par(mfrow=c(2,1))
+</code></pre>
+
+<pre><code>## The following objects are masked from mtcars (pos = 3):
+## 
+##     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt
+</code></pre>
+
+<pre><code class="r">par(mfrow=c(2,1))
 plot(names(stepsPerIntervalWeekend), stepsPerIntervalWeekend, type=&quot;l&quot;,
      main=&quot;weekend&quot;,
      xlab=&quot;Interval&quot;,

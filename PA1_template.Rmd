@@ -101,7 +101,7 @@ Therefore, the plot, median and mean do not differ much from the estimates in th
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-In order to surface any differences in activity patterns between weekdays and weekends,  new factor variable is created with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
+In order to surface any differences in activity patterns between weekdays and weekends,  new factor variable is created with two levels – “weekday” and “weekend” indicating whether a given date is a weekday day or a weekend day.
 
 ```{r}
 imputedData$datetype <- factor(ifelse(weekdays(as.Date(data$date)) %in% c("Saturday", "Sunday"), "weekend", "weekday"))

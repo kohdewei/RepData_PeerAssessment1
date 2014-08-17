@@ -120,7 +120,7 @@ Therefore, the plot, median and mean do not differ much from the estimates in th
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-In order to surface any differences in activity patterns between weekdays and weekends,  new factor variable is created with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
+In order to surface any differences in activity patterns between weekdays and weekends,  new factor variable is created with two levels – “weekday” and “weekend” indicating whether a given date is a weekday day or a weekend day.
 
 
 ```r
@@ -145,6 +145,15 @@ We then generate a panel plot containing a time series plot of the 5-minute inte
 
 ```r
 attach(mtcars)
+```
+
+```
+## The following objects are masked from mtcars (pos = 3):
+## 
+##     am, carb, cyl, disp, drat, gear, hp, mpg, qsec, vs, wt
+```
+
+```r
 par(mfrow=c(2,1))
 plot(names(stepsPerIntervalWeekend), stepsPerIntervalWeekend, type="l",
      main="weekend",
